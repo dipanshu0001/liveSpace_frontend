@@ -1,0 +1,205 @@
+.lisiting-css {
+    display: flex;
+    width:98%;
+    /* position: absolute; */
+    min-height: 300px;
+    margin:0px auto;
+    left:0;
+    right:0;
+    z-index:3;  
+    box-shadow: 10px 10px 20px gray;
+
+}
+
+.list-l {
+    /* height: 265px; */
+   
+    /* width:330px;      */
+    display: flex;
+    flex-direction: column;
+    flex:.3;
+
+}
+.l-details{
+    height:50px;
+    z-index:5;
+    width:80%;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    /* margin:0px; */
+    margin-left: 0px;
+}
+.l-details .btn{
+    position: absolute;
+    top:0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color:#519fff;  
+    bottom:0;
+    width:100%;
+    height:100%;
+    z-index:4;
+}
+.hidden{
+    background-color: transparent;
+    border:none;
+}
+.l-price{
+    /* margin-top:20px; */
+    height:250px;
+    width:100%;
+    /* z-index:-1; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: red   ; */
+}
+.for-sale,.mortage{
+    display: flex;
+    flex-direction: column;
+}
+.for-sale:nth-child(1){
+    font-weight: bolder;
+    font-size:xx-large;
+}
+.mortage-value{
+    font-weight: bolder;
+    font-size:x-large;
+}
+.list-m{
+    display: flex;
+    /* border: 1px solid black; */
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    flex:.4;
+}
+.list-r{
+    /* height: 265px; */
+    display: flex;
+    /* border: 1px solid black; */
+    flex:.3;
+}
+.m-details{
+    display: flex;
+    flex-direction:column;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    padding:20px 20px;
+    
+}
+.m-details>*{
+    padding:10px;
+    
+}
+.m-head{
+    font-size:xx-large;
+    font-weight: bold;
+    color:black;
+    cursor: pointer;
+    transition:all 500ms ease-in;
+    padding-top: 30px;
+}
+.m-head:hover{
+    color:cyan;
+}
+.m-size{
+    display: flex;
+    width:100%;
+
+    justify-content:space-evenly;
+}
+.Beds span:last-of-type{
+    font-size:large;
+    font-weight:bold;
+    
+}
+.Baths span:last-of-type{
+    font-size:large;
+    font-weight:bold;
+     
+}
+.SQFT span:last-of-type{
+    font-size:large;
+    font-weight:bold;
+    
+}
+.Beds,.Baths,.SQFT{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    width:80%;
+}
+.list-r{
+    width:330px;     
+    display: flex;
+    flex-direction: column;
+    /* border: 10px solid black; */
+    flex:.3;
+    /* background-color: red; */
+}
+.r-social{
+    height:50px;
+    z-index:5;
+    width:100%;
+    /* border:1px solid yellow; */
+    /* background-color: rgb(5, 102, 171); */
+    /* border:1px solid rgb(5, 102, 171); */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display:flex;
+    justify-content: space-evenly;
+    /* margin:0px; */
+    /* align-items: right; */
+    align-items: center;
+    margin-right: 0px;
+    /* transition: 100ms ease-in infinite ; */
+} 
+.r-social .share{
+    flex:30%;
+    height:100%;
+    border-top-left-radius: 20px;
+    border:0px;
+    transition: 500ms ease-in-out;
+    
+    border-right: 1px solid gray;
+}
+.r-social> *:hover{
+    background-color: #2183fb;
+}
+.r-social .star{
+    flex:30%;
+    height:100%;
+    border:0px;
+    border-right: 1px solid gray;
+    /* transition: 500ms ease-in-out; */
+
+}
+.r-social .active-star{
+    color:gold;
+    /* border: 2px solid orange; */
+}
+.r-social .calendar{
+    flex:40%;
+    height:100%;
+    border:0px;
+    transition: 500ms ease-in-out;
+
+}
+.r-type{
+display:grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+margin:auto auto;
+}
+.r-flex{
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+}
+.r-flex span:nth-child(1){
+    font-weight: bold;
+}

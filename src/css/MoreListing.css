@@ -1,0 +1,65 @@
+.recent-list{
+    width:100%; 
+    margin-top: 30px;
+}
+.recent-list .main{
+    width:100%;
+    display: flex;
+    flex-direction:column;
+    
+}
+.recent-list .main .detail-div
+{
+    display:flex;
+    padding:10px;
+    /* margin:10px; */
+    /* background-color: red; */
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recent-list .main .detail-div .img{
+    width:48%;
+    /* padding:10px; */
+    height:100px;
+    /* background-color:    red; */
+    border-radius: 5px;
+    /* height:max-content; */
+    overflow:hidden;
+}
+.recent-list .main .detail-div .img img{
+    width:100%;
+    height:100%;
+    /* background-position: center center; */
+    object-fit: cover;
+        border-radius: 5px;
+
+    transform: scale(1);
+    transition: transform 500ms;
+}
+.recent-list .main .detail-div .img img:hover{
+    transform: scale(1.2);
+}
+.recent-list .main .detail-div .other-details{
+    font-family: "Poppins",serif;
+width:50%;
+    font-weight: 500;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.recent-list .main .detail-div .other-details>*{
+    padding:20px;
+    padding-bottom: 10px;
+    font-weight:700;
+    text-transform:capitalize;
+}
+
+.recent-list .main .detail-div .other-details   :last-child {
+    color:gray;
+}
+.recent-list .main .detail-div .other-details .link{
+    color:black;
+}

@@ -1,0 +1,83 @@
+.listings{
+    display: flex;
+    width:100%;
+    position: relative;
+    justify-content: space-around;
+    padding:0px 10px;
+    overflow-x: hidden;
+    height:100vh;
+}
+.listings div{
+    overflow-y: auto;
+}
+.listings .details{
+    width:800px;
+     display: flex;
+     flex-wrap: wrap;
+    flex-direction: row;
+   
+}
+.img-outer{
+    position: relative;
+}
+.img-outer .content{
+    position: absolute;
+    margin:0px 0px 0px 20px;
+    top: 70%;
+    font-size:xx-large;
+    scale:1.5;
+    font-weight: 900;
+    font-family: "Poppins",serif;
+    left: 10%;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    line-height: 50px;
+}
+.img-outer .img-div{
+    filter:blur(4px);
+    background: none;
+}
+.img-outer .content ul{
+    list-style: none;
+    display: flex;
+    font-size: small !important;
+    align-items: baseline !important;;
+    justify-content:center;
+    align-self: self-start;
+}
+.img-outer .content ul li {
+    margin:0px 1px;
+    line-height: 1px;
+}
+.img-outer .content ul li a:hover{
+    color:blue;
+}       
+
+
+
+.listings .map{
+    flex:1 1;
+    /* width:50%; */
+    /* padding:20px;     */
+    height: 100vh;
+}
+.listings .map iframe
+{
+    width:100%;
+    height:100%;
+    margin:0px;
+}
+.listing_details{
+    width:50%;
+}
+@media only screen and (max-width:1199px){
+     .listings .details{
+        width:100%;
+    }
+}
+@media only screen and (max-width:700px){
+     .listing_details{
+        width:100%;
+    }
+}

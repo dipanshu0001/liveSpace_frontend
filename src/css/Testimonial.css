@@ -1,0 +1,54 @@
+.Testi-main{
+    /* width:80%; */
+    width:var(--common-desktop-width);
+    margin:10px auto;
+    /* position: relative; */
+    /* background-color: yellow; */
+}
+.heading_all_feedback{
+    display: flex;
+    width: var(--Heading-div-width);
+    margin:auto;
+    /* background: white; */
+
+}
+.heading_all_feedback >*{
+    flex:40%;
+    text-align: left;
+}
+.Testi-content{
+    /* padding:20px; */
+    /* background-color:red; */
+    /* width:calc(80%-40px); */
+    width:80%;
+    margin:10px auto;
+    /* position: absolute; */
+    display: flex;
+    /* background-color: red; */
+    justify-content: space-between;
+    /* margin:0px auto; */
+    /* background: green; */
+    flex-wrap: wrap;
+    /* flex-shrink: 1; */
+}
+/* .Testi-content>*{
+    flex:.3;
+} */
+@media only screen and (max-width:1100px){
+    .Testi-content{
+        flex-direction: column;
+        width:100%;
+        margin:0px auto;
+    }
+    .heading_all_feedback{
+        width:100%;
+    }
+    .Testi-main{
+        width:var(--mob-div-width);
+        margin:0px;
+        padding: 0px 20px;
+        margin-top:30px;
+        /* background-color:green; */
+    }
+}
+

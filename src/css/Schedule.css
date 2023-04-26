@@ -1,0 +1,28 @@
+.schedule-outer{
+    width:100%;
+    padding:20px;
+}
+.schedule-outer .schedule-main{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    gap:5px;
+    margin:auto;
+}
+@media only screen and (max-width:960px){
+    .schedule-outer .schedule-main{
+        grid-template-columns: repeat(2,50%);
+    }
+}
+@media only screen and (max-width:600px)
+{
+    .schedule-outer{
+        width:100%;
+        padding:0px;
+    }
+
+    .schedule-outer .schedule-main{
+        grid-template-columns: repeat(1,100%);
+        padding:0px;
+    }
+}

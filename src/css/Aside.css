@@ -1,0 +1,103 @@
+/* .aside-scroll::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f015";
+        -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    font-weight: 900;
+    text-rendering: auto;
+    line-height: 28px;
+    margin-left: auto;
+    font-size: 10px;
+} */
+/* .aside-main{
+    background-color: white;
+    width:330px;
+    border:2px solid black;
+} */
+ul,p{
+    padding:0px;
+    margin:0px;
+}
+.aside-main{
+    position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999999;
+      width: 270px;
+      height: 100%;
+      background-color: white;
+      box-shadow: 0 2px 32px rgb(0 0 0 / 15%);
+      transition: .3s;
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      /* width:0px; */
+      transition: transform 1000ms linear;
+      transform: translateX(-270px);
+  }
+  .open{
+    transform: translateX(0px);
+    transition: transform 1000ms;
+    /* width:270px; */
+    display: flex;
+  }
+/* a:link {
+    color: black;
+    text-decoration: none;
+  } */
+  
+.aside-scroll{
+    overflow-y: auto;
+    position: relative;
+}
+.aside-scroll ul li{
+    list-style: none;
+    font-size: large;
+    font-weight: 500;
+    padding:20px 20px;
+}
+.icon{
+    padding:10px 15px;
+}
+/*  */
+.home::before{
+    content: "\f015";
+}
+
+.facebook::before{
+    font-family: FontAwesome;
+
+    content: "\f09a";
+}
+/* .pintrest::before{
+    font-family: FontAwesome;
+    content: "\f231";
+} */
+.linkedin::before{
+    font-family: FontAwesome;
+
+    content: "\f0e1";
+}
+.twitter::before{
+    font-family: FontAwesome;
+
+    content: "\f099";
+}
+.cross::after{
+    font-family: FontAwesome;
+
+    content: "\f00d";
+}
+.menu-outer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+}
+.heading-mob{
+    font-weight: 600;
+    font-size: larger;
+}
+

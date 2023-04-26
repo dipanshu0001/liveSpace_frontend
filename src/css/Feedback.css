@@ -1,0 +1,118 @@
+.feedback_content{
+width:100%;
+height:inherit;
+padding:5px;
+flex:.3;
+/* background-color: red; */
+margin:20px;
+/* border:1px solid #b1b2b3  ; */
+border-radius: 5px;
+
+/* flex: 0 0 100%; */
+/* max-width: 100%; 
+/* min-height:600px; */
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.feedback_content_middle{
+    margin:20px;
+    width:90%;
+}
+.feedback
+{
+    flex:.5;
+    border-radius: 5px;
+    width:calc(100%-10px);
+    padding:10px;
+    box-sizing: border-box;
+    background-color: #d7d8d8;
+    color:black;
+    position: relative;
+}
+.feedback>*{
+    padding:10px;
+}
+.small-triangle
+{
+    width:30px;
+    height:30px;
+    transform: rotate(45deg);
+    background-color: #d7d8d8;
+    position: absolute;
+    bottom:0;
+    z-index:-1;
+    left:40;
+}
+.details
+{
+    display: flex;
+    margin-top:20px;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+
+}
+.details .div
+{
+    border-radius: 10px;
+    width:70px;
+    height:70px;
+    position: relative;
+    flex:20%;
+    margin:auto;
+    /* background-color: yellow; */
+}
+.details .div img
+{
+    position: absolute;
+    width:100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.personal-details
+{
+    flex:80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:10px;
+    text-align: left;
+}
+.personal-details p{
+    margin:auto;
+    flex:1;
+}
+h5{
+    margin: 0px;
+    font-family: "Poppins",serif;
+    font-weight: 700;
+    line-height: 28px;
+    color: #101737;
+}
+.personal-details span{
+    line-height: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #848486;
+}
+.personal-details .likes{
+    /* margin:10px 0px; */
+
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-evenly   ;
+    align-items: center;
+}
+@media only screen and (max-width:1100px){
+    .feedback_content{
+    flex: 0 0 100%;
+    margin:0px;
+    padding:10px;
+    }
+}
+
+

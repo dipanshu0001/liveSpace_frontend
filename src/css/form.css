@@ -1,0 +1,78 @@
+.form-outer {
+    width: 100%;
+}
+
+.form-outer .img-outer {
+    position: relative;
+}
+
+.form-outer .img-div {
+    filter: blur(2px);
+    background: none;
+}
+
+.form-outer .img-outer .content {
+    position: absolute;
+    margin: 0px 0px 0px 20px;
+    top: 70%;
+    font-size: xx-large;
+    scale: 1.5;
+    font-weight: 900;
+    font-family: "Poppins", serif;
+    left: 10%;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    line-height: 50px;
+}
+
+.form-outer .btn-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 30px auto;
+    padding: 20px;
+    /* background-color: yellowgreen; */
+}
+
+.form-outer .btn-details {
+    list-style: none;
+    width: 30%;
+}
+
+    
+.btn-details .btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    /* background-color: red; */
+    /* border:1px solid gray;   */
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+    border: 0;
+    border-radius:8px;
+    box-shadow: 0 2px 9px 0 rgba(34,12,43,.1);
+    margin-bottom: 30px;
+    color: #101737;
+    font-family: "Poppins",sans-serif;
+}
+.btn-details .active{
+    background-color:red;
+}
+.btn-details .btns:hover{
+background-color: rgba(95, 95, 95, 0.1);
+}
+.btns .serial-number {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, .1);
+    transition: .3s;    
+}

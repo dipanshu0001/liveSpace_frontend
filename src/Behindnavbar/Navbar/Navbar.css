@@ -1,0 +1,144 @@
+.navbar-main{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* background-color:red; */
+    height:120px;
+    position: absolute;
+    z-index:20;
+    /* position: sticky;  */
+    border-radius: 10px;
+    width:90%;
+    margin:20px auto;
+    left:0;
+    top:0;
+    right:0;
+
+    /* margin:3% 10%; */
+}
+.upper-navbar{
+    display: flex;
+    border-bottom: 1px solid black;
+    background-color: black;
+    color:white;
+    /* flex-direction: column; */
+    border-radius: 10px;
+    /* background: none; */
+    width:100%;
+    height:40%;
+    /* border:1px solid red; */
+    margin-top: 0px;
+    /* top:0px; */
+    justify-content: space-evenly;
+}
+
+.social-links{
+    flex:.2;
+    display:flex;
+    justify-content: space-between;
+    margin:auto 0px;
+}
+.social-links:hover
+{
+    border:2px solid black;
+}
+.login-signup
+{
+    display: flex;
+    flex:.2;
+    justify-content: space-evenly;
+    margin:auto 0px;
+}
+.bottom-navbar{
+    height:60%;
+    width:100%;
+    /* border:1px solid red;  */
+    background-color:whitesmoke;
+    box-shadow: 0rem 0rem 2rem black;
+    /* margin:0% 5%; */
+}
+.logo{
+    flex:.2;
+    height:100%;
+    width:100%;
+     
+}
+.logo img{
+    height:100%;
+    width:100%;
+    object-fit: contain;  
+    
+}
+.links{
+    flex:.6;
+    display:flex;
+    justify-content: space-evenly;
+    /* margin:auto 0px; */
+    align-items: center;
+}
+.lisiting-css{
+    flex:.2;
+     /* margin:10px     0px; */
+}
+
+.outer-logo{
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+    flex:.8;
+    /* background-color: black; */
+}
+.outer-logo-mob{
+    display: none;
+}
+
+.sticky {
+    /* position:absolute; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin:0px !important;
+    height:100px;
+  }
+  .hidden{
+    display:none;
+
+  }
+  .width{
+    width:100%;
+    z-index:20;
+  }
+  .mob_nav{
+    display:none;
+  }
+  @media only screen and (max-width:1200px) {
+    .mob_nav
+    {
+        display: block;
+        margin:auto 0px;  
+        padding: 10px 20px;  
+    }
+
+    .outer-logo{
+        display:none;
+        width:0%;
+        height:0%;
+    }
+    .bottom-navbar{
+        position: relative;
+    }
+    .active{
+      display:block;
+      position:absolute;
+      top:10px;
+      background-color: red;
+      width:100%;   
+      z-index:20;
+      left:0;
+      /* transform: translateX(-50%); */
+      /* display: flex; */
+      /* flex-direction: column; */
+      height: 500px;
+    }
+    
+  }

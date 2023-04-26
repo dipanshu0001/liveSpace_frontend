@@ -1,0 +1,26 @@
+.meet-agent-content{
+    width:80%;
+    margin:0px auto;
+}
+.meet-agent-main{
+    display:flex;
+    /* justify-content: space-evenly; */
+    width:var(--common-desktop-width);
+    flex-wrap: nowrap;
+    margin:0px auto;
+    flex-direction: column;
+    align-items: flex-start;
+}
+ .meet-agent-main .meet_sliders{
+width:100%;
+}
+@media only screen and (max-width:1000px) {
+    .meet-agent-main{
+        width:var(--mob-div-width);
+        /* margin:0px auto; */
+        /* padding:0px 20px; */
+        margin:var(--mob-margin-t) 0px;
+        /* background-color: red; */
+    }
+    
+}

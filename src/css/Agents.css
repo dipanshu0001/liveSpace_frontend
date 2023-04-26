@@ -1,0 +1,147 @@
+.agents-outer{
+    width:100%;
+    height:100%;
+}
+.agents-outer .img-outer{
+    position: relative;
+}
+.agents-outer .img-div{
+    filter:blur(4px);
+    background: none;
+}
+.img-outer .content{
+    position: absolute;
+    margin:0px 0px 0px 20px;
+    top: 70%;
+    font-size:xx-large;
+    scale:1.5;
+    font-weight: 900;
+    font-family: "Poppins",serif;
+    left: 10%;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    line-height: 50px;
+}
+.img-outer .content ul{
+    list-style: none;
+    display: flex;
+    font-size: small !important;
+    align-items: baseline !important;;
+    justify-content:center;
+    align-self: self-start;
+}
+.img-outer .content ul li {
+    margin:0px 1px;
+}
+.img-outer .content ul li a:hover{
+    color:blue;
+}
+.agents-outer .main{
+    display:flex;
+    width:80%;
+    margin:30px auto;
+    justify-content: space-between;
+
+}
+.agents-outer .main .profile-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+       grid-template-rows: auto;
+       width:68%;
+       /* background-color: yellow; */
+       padding: 20px 30px;
+}
+.agents-outer .main .recent-list{
+    width:28%; 
+}
+.agents-outer .main .recent-list .main{
+    width:100%;
+    display: flex;
+    flex-direction:column;
+    
+}
+.agents-outer .main .recent-list .main .detail-div
+{
+    display:flex;
+    padding:10px;
+    /* margin:10px; */
+    /* background-color: red; */
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.agents-outer .main .recent-list .main .detail-div .img{
+    width:48%;
+    /* padding:10px; */
+    height:100px;
+    /* background-color:    red; */
+    border-radius: 5px;
+    /* height:max-content; */
+    overflow:hidden;
+}
+.agents-outer .main .recent-list .main .detail-div .img img{
+    width:100%;
+    height:100%;
+    /* background-position: center center; */
+    object-fit: cover;
+        border-radius: 5px;
+
+    transform: scale(1);
+    transition: transform 500ms;
+}
+.agents-outer .main .recent-list .main .detail-div .img img:hover{
+    transform: scale(1.2);
+}
+.agents-outer .main .recent-list .main .detail-div .other-details{
+    font-family: "Poppins",serif;
+width:50%;
+    font-weight: 500;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.agents-outer .main .recent-list .main .detail-div .other-details>*{
+    padding:20px;
+    font-weight:700;
+    text-transform:capitalize;
+}
+
+.agents-outer .main .recent-list .main .detail-div .other-details   :last-child {
+    color:gray;
+}
+@media only screen and (max-width:950px){
+    .agents-outer .main{
+        width:90%;
+        flex-direction: column;
+        justify-content:center;
+    }
+    .agents-outer .main .profile-div,.agents-outer .main .recent-list{
+        width:100%;
+    }
+    .agents-outer .main .recent-list .main{
+        width:90%;
+        margin:auto;
+    }
+    .img-outer .content{
+        scale:1;
+    }
+}
+@media only screen and (max-width:707px){
+    .agents-outer .main{
+        width:100%
+    }
+    .agents-outer .main .profile-div{
+
+
+        grid-template-columns: 1fr;
+    }
+
+    .agents-outer .main .recent-list .main{
+        width:90%;
+        margin:auto;
+    }
+    
+}

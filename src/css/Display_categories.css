@@ -1,0 +1,495 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    padding: 0px;
+    margin: 0px;
+}
+
+.categories-outer {
+    width: 100%;
+    /* padding:20px; */
+    margin: auto;
+    height:Auto;
+    margin-bottom: 100px;
+    min-height:1000px;
+
+
+    /* position: relative; */
+}
+
+.categories-outer .img-outer {
+    position: relative;
+}
+
+.categories-outer .img-div {
+    filter: blur(4px);
+    background: none;
+}
+
+.categories-outer .img-outer .content {
+    /* position: absolute; */
+    margin: 0px 0px 0px 20px;
+    top: 70%;
+    font-size: xx-large;
+    scale: 1.5;
+    font-weight: 900;
+    font-family: "Poppins", serif;
+    left: 10%;
+    text-align: baseline;
+    color: white;
+    font-size: 2rem;
+    line-height: 50px;
+}
+
+.categories-outer .img-outer .content .changecolor {
+    color: white;
+    padding-bottom: 3px;
+}
+
+.categories-outer .img-outer .content .changecolor:hover {
+    color: #519fff;
+}
+
+.categories-outer .img-outer .content ul {
+    list-style: none;
+    display: flex;
+    font-size: small !important;
+    align-items: baseline !important;
+    ;
+    justify-content: center;
+    align-self: self-start;
+}
+
+.categories-outer .img-outer .content ul li {
+    padding: 0px;
+    margin: 0px 1px;
+}
+
+.categories-outer .img-outer .content ul li a:hover {
+    color: blue;
+}
+
+.categories-outer .categories-main {
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+    height: auto;
+    justify-content: center;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    padding-bottom: 100px;
+    /* position: relative; */
+    height: auto;
+    /* background-color: yellow; */
+
+}
+
+
+.categories-main .filter-outer {
+    height: 30px;
+    width: 18%;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    /* position: sticky; */
+    /* top: 100px;  */
+}
+
+.categories-main .arrow {
+    display: none;
+}
+
+.categories-main .arrow>* {
+    color: black;
+}
+
+.search {
+    display: flex;
+    margin: 10px 10px 10px 0px;
+    width: 100%;
+    border-bottom: 1px solid #999;
+
+}
+
+.search input {
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 6px 30px;
+    font-family: Poppins;
+    box-sizing: border-box;
+}
+
+.search .search-icon {
+    cursor: pointer;
+}
+
+
+.filter-main {
+    width: 100%;
+}
+
+.categories-inner {
+    padding: 20px;
+    width: 80%;
+    height: inherit
+}
+
+
+.products {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+}
+
+.filter-main .categories-display-type {
+    margin-top: 25px;
+    width: 100%;
+    /* display: flex; */
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.filter-main .categories-display-type ul {
+    list-style-type: none;
+}
+
+.filter-main .categories-display-type .names {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin: 10px 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 9px 0 rgba(34, 12, 43, .1);
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    transition: background-color 250ms linear;
+}
+
+.filter-main .categories-display-type .names:hover {
+    background-color: #519fff;
+    color: #fff;
+}
+
+.filter-main .categories-display-type .names>* {
+    margin: 0px 5px;
+}
+
+.filter-main .categories-display-price {
+    width: 100%;
+    /* background-color: red; */
+    /* display: flex; */
+    margin-top: 20px;
+}
+
+.filter-main .categories-display-price .range-css {
+    display: flex;
+    margin: 10px 10px 10px 0px;
+    width: 100%;
+    /* background-color: red; */
+    border-bottom: 1px solid #999;
+}
+
+.filter-main .categories-display-price .range-css input {
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 6px 30px;
+    font-family: Poppins;
+    box-sizing: border-box;
+}
+
+.filter-main .categories-display-rentalPeriod {
+    margin-top: 10px;
+    /* display: flex; */
+    /* background-color: red; */
+}
+
+.filter-main .categories-display-rentalPeriod .rent-css {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.filter-main .categories-display-rentalPeriod .radiobox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.filter-main .categories-display-rentalPeriod .radiobox>* {
+    margin: 0px 5px;
+}
+
+.filter-main .categories-display-rentalPeriod .apply-filter {
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+    align-content: center;
+    color: white;
+}
+
+@media only screen and (min-width:921px) and (max-width:1000px) {
+    .categories-outer .categories-main {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width:701px) and (max-width:920px) {
+    .categories-outer .categories-main {
+        width: 100%;
+    }
+
+    .products {
+        width: 100%;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .filter-main .categories-display-rentalPeriod .apply-filter {
+        flex-direction: column;
+    }
+
+    .filter-main .categories-display-rentalPeriod .apply-filter>* {
+        margin: 10px 0px;
+    }
+}
+
+@media only screen and (min-width:671px) and (max-width:700px) {
+    .categories-outer .categories-main {
+        width: 98%;
+        /* top:0px; */
+        /* bottom:0px; */
+        left: 0px;
+        right: 0px;
+        /* flex-direction: column; */
+    }
+
+    .products {
+        width: 100%;
+        grid-template-columns: repeat(1, 98%);
+    }
+
+    .products>* {
+        margin: auto;
+
+    }
+
+    .filter-main .categories-display-rentalPeriod .apply-filter {
+        flex-direction: column;
+    }
+
+    .filter-main .categories-display-rentalPeriod .apply-filter>* {
+        margin: 10px 0px;
+    }
+}
+
+@media only screen and (min-width:500px) and (max-width:670px) {
+    
+
+    .products {
+        width: 100%;
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    .categories-outer .categories-main {
+        width: 100%;
+        padding: 10px;
+        left: 0px;
+        right: 0px;
+        flex-direction: column;
+    }
+
+    .categories-outer .categories-main .filter-outer {
+        display: none;
+    }
+
+    .secondary-show {
+        display: inline-block !important;
+        background-color: white !important;
+        width: 75vw;
+        height: 100vh;
+        z-index: 999;
+        overflow-y: scroll;
+    }
+
+    .secondary-show .filter-main .categories-display-rentalPeriod{
+        display: block;
+    }
+     .secondary-show .filter-main {
+        /* position: relative; */
+        width: 90%;
+        background-color: white;
+        height:120%; 
+        /* ! here we have set height to 120% so 100% will be of parent +20% extra for showing other fields which are not able to come inside 100% when height is given */
+    }
+    .categories-main .arrow {
+        display: inline-block;
+        height: 10px;
+        width: 18%;
+        z-index: 1;
+        position: sticky;
+        top: 100px;
+    }
+
+    .categories-outer .categories-main .categories-inner {
+        padding: 10px;
+        width: 100%;
+        margin-top:50px;
+    }
+    .secondary-show .filter-main .categories-display-rentalPeriod .rent-css{
+        display: block;
+    }
+
+    .arrow-search {
+        display: flex;
+        /* width: 95vw; */
+        /* background-color: rgb(240, 237, 237); */
+        padding: 0px;
+        /* border: 1px solid black; */
+        /* border-radius: 10px; */
+    }
+
+    .arrow-search .search {
+        width: 100%;
+        border-bottom: 0px;
+    }
+
+    .arrow-search .search input {
+        background-color: transparent !important;
+        ;
+        color: black;
+        /* border-bottom: 1px solid gray; */
+
+    }
+
+
+    .products>* {
+        margin: auto;
+    }
+
+    .filter-main .categories-display-rentalPeriod .apply-filter {
+        flex-direction: column;
+    }
+
+    .filter-main .categories-display-rentalPeriod .apply-filter>* {
+        margin: 10px 0px;
+    }
+
+    .categories-outer .img-outer .content {
+        font-weight: normal;
+        scale: initial;
+        text-align: left;
+        margin: 0px;
+    }
+
+}
+
+.secondary-div {
+    display: none;
+}
+
+@media only screen and (min-width:280px) and (max-width:501px) {
+    .categories-outer .categories-main {
+        width: 100%;
+        padding: 10px;
+        left: 0px;
+        right: 0px;
+        flex-direction: column;
+    }
+
+    .categories-outer .categories-main .filter-outer {
+        display: none;
+    }
+
+    .secondary-show {
+        display: inline-block !important;
+        /* transform: translateX(50px); */
+        background-color: white !important;
+        width: 75vw;
+        height: 100vh;
+        /* height: auto; */
+        z-index: 999;
+        overflow-y: scroll;
+    }
+
+    .secondary-show .filter-main {
+        /* position: relative; */
+        width: 90%;
+        background-color: white;
+        height:120%; 
+        /* ! here we have set height to 120% so 100% will be of parent +20% extra for showing other fields which are not able to come inside 100% when height is given */
+    }
+    .secondary-show .filter-main .categories-display-rentalPeriod .rent-css{
+        display: block;
+    }
+    .categories-main .arrow {
+        display: inline-block;
+        height: 10px;
+        width: 18%;
+        z-index: 1;
+        position: sticky;
+        top: 100px;
+    }
+
+    .categories-outer .categories-main .categories-inner {
+        padding: 10px;
+        width: 100%;
+        margin-top:50px;
+    }
+
+    .arrow-search {
+        display: flex;
+        /* width: 95vw; */
+        /* background-color: rgb(240, 237, 237); */
+        padding: 0px;
+        border:none;
+        /* border: 1px solid black; */
+        /* border-radius: 10px; */
+        position: sticky;
+        top:10px;
+    }
+
+    /* .arrow-search .search {
+        width: 100%;
+        border-bottom: 0px;
+    } */
+/* 
+    .arrow-search .search input {
+        background-color: transparent !important;
+        ;
+        color: black;
+        border-bottom: 1px solid gray;
+
+    } */
+
+    .products {
+        width: 100%;
+        grid-template-columns: repeat(1, 98%);
+    }
+
+    .products>* {
+        margin: auto;
+    }
+
+    .filter-main .categories-display-rentalPeriod .apply-filter {
+        flex-direction: column;
+    }
+
+    .filter-main .categories-display-rentalPeriod .apply-filter>* {
+        margin: 10px 0px;
+    }
+
+    .categories-outer .img-outer .content {
+        font-weight: normal;
+        scale: initial;
+        text-align: left;
+        margin: 0px;
+    }
+
+}

@@ -1,0 +1,195 @@
+
+*{
+    overflow-x:none !important;
+}
+.agent-detail-wrapper {
+    padding: 80px 0px;
+    /* position: relative; */
+    width: 100%;
+}
+
+.agent-detail-wrapper .container {
+    width: 90%;
+    margin: auto;
+    /* background-color: yellow; */
+}
+
+.agent-detail-wrapper .container .row {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.agent-detail-wrapper .container .row .sidebar {
+    /* flex: 0 0 33.333333%; */
+    width:33.3%;
+    /* max-width: 33.333333%; */
+}
+
+.agent-detail-wrapper .container .row .sidebar .content-outer {
+    position: sticky;
+    top:120px;
+    bottom:0px;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    margin:auto;
+}
+.agent-detail-wrapper .container .row .sidebar .content-outer .main{
+    padding:20px;
+   background-color: cyan;
+    padding: 20px;
+    border-radius: 8px;
+}
+.agent-detail-wrapper .container .row .sidebar .content-outer .agent-main {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.agent-detail-wrapper .container .row .sidebar .content-outer .agent-main .intro-area{
+    /* padding:20px; */
+    text-align: left;
+    font-weight: normal;
+}
+
+.agent-detail-wrapper .container .row .sidebar .content-outer .agent-main .img {
+    width: 30%;
+    height: 90px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.agent-detail-wrapper .container .row .sidebar .content-outer .agent-main .img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+
+.agent-detail-wrapper .container .row .sidebar .content-outer .agent-main .agent-name {
+    width: 40%;
+    margin: auto;
+}
+.agent-detail-wrapper .container .row .sidebar .content-outer .agents-details {
+    position: static;
+    top: 120px;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
+.input_div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+
+.input_div>* {
+    width: 50%;
+
+}
+.form .input_areas {
+    height: 50px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    margin: 10px 0px;
+    width: 100%;
+    color: #6e6e6e;
+    border: 1px solid #e5e1dc;
+    background-color: #fff;
+    letter-spacing: .1px;
+    font-size: 14px;
+}
+
+.agent-detail-wrapper .container .row .sidebar .content-outer .form {
+    width: 80%;
+    margin: 10px 20px;
+}
+
+.agent-detail-wrapper .container .row .recent-list{
+    height:auto;
+    /* flex: 0 0 66 .666667%; */
+    width:66.7%;
+    /* max-width: 66.666667%; */
+}
+.agent-detail-wrapper .container .row .recent-list .recent-list-content{
+    display: grid;
+    width:100%;
+    grid-template-columns: repeat(2,50%);
+
+}
+@media only screen and (min-width:850px) and (max-width:1060px){
+    .agent-detail-wrapper{
+        width:100%;
+        padding:40px;
+    }
+    .agent-detail-wrapper .container .row >*{
+        width:50%;
+    }
+    .agent-detail-wrapper .container{
+        width:100%;
+        margin:auto;
+        background-color: red;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:849px){
+    .agent-detail-wrapper{
+        width:100%;
+        padding:40px;
+    }
+    .agent-detail-wrapper .container .row {
+        flex-direction:column;
+    }
+    .agent-detail-wrapper .container .row .sidebar{
+        width:80%;
+        margin:auto;
+        /* background-color: green ; */
+    }
+    .agent-detail-wrapper .container .row .recent-list{
+        padding-top:40px;
+        margin:auto;
+        width:80%;  
+    }
+    .agent-detail-wrapper .container{
+        width:100%;
+        margin:auto;
+        /* background-color: red; */
+    }
+    .agent-detail-wrapper .container .row .recent-list .recent-list-content{
+        grid-template-columns: repeat(1,100%);
+    
+    }
+}
+@media only screen and (min-width:200px) and (max-width:599px){
+    .agent-detail-wrapper{
+        width:100%;
+        /* padding:40px; */
+    }
+    .agent-detail-wrapper .container .row {
+        flex-direction:column;
+    }
+    .agent-detail-wrapper .container .row .sidebar{
+        width:100%;
+        margin:auto;
+        /* background-color: green ; */
+    }
+    .agent-detail-wrapper .container .row .recent-list{
+        padding-top:40px;
+        margin:auto;
+        width:100%;  
+    }
+    .agent-detail-wrapper .container{
+        width:100%;
+        margin:auto;
+        /* background-color: red; */
+    }
+    .agent-detail-wrapper .container .row .recent-list .recent-list-content{
+        grid-template-columns: repeat(1,100%);
+    
+    }
+}
