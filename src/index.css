@@ -26,7 +26,7 @@ html{
   /* min-height:100%; */
   /* width:100vw; */
   /* background-color: green; */
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   /* width:100vh; */
 }
 li,ul,hr{
