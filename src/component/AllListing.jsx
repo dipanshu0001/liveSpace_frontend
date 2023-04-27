@@ -4,7 +4,7 @@ import { CiRuler } from "react-icons/ci";
 import { GiBathtub } from "react-icons/gi";
 import { BiBed } from "react-icons/bi";
 import '../css/SubmitedListing.css'
-import './SubmitTemplate.jsx'
+// import './SubmitTemplate.jsx'
 import { useAuthData } from '../DataProvider/AccountProvider'
 import Agent_model from './Agent_model';
 

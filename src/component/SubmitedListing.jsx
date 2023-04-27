@@ -5,40 +5,40 @@ import { CiRuler } from "react-icons/ci";
 import { GiBathtub } from "react-icons/gi";
 import { BiBed } from "react-icons/bi";
 import '../css/SubmitedListing.css'
-import './SubmitTemplate.jsx'
+// import './SubmitTemplate.jsx'
 
 
 function SubmitedListing() {
-  const { details,set_err } = useAuthData();
+  const { details, set_err } = useAuthData();
   const [data, setData] = useState([])
-  const mark=async(e)=>{
-    try{
+  const mark = async (e) => {
+    try {
       console.log(e);
-      const result=await axios.post('/Listings/MarkSold',{_id:e,uid:"o97F4U9nRhgpEQwfMBCUKUAD22q1"});
+      const result = await axios.post('https://backend-livespace.onrender.com/Listings/MarkSold', { _id: e, uid: details.uid });
       // console.log(result.data.data)
-      set_err(result.data.message,result.data.iserror)
-      setData(prev=>([...result.data.data]))
-    }catch(err){
-      set_err(err.message,err.iserror)
+      set_err(result.data.message, result.data.iserror)
+      setData(prev => ([...result.data.data]))
+    } catch (err) {
+      set_err(err.message, err.iserror)
       console.log(err)
     }
   }
-  const Delete_by_id=async(e)=>{
-    try{
+  const Delete_by_id = async (e) => {
+    try {
       console.log(e);
-      const result=await axios.post('/Listings/DeleteId',{_id:e,uid:"o97F4U9nRhgpEQwfMBCUKUAD22q1"});
+      const result = await axios.post('https://backend-livespace.onrender.com/Listings/DeleteId', { _id: e, uid: details.uid });
       // console.log(result.data.data)
-      set_err(result.data.message,result.data.iserror)
-      setData(prev=>([...result.data.data]))
-    }catch(err){
-      set_err(err.message,err.iserror)
+      set_err(result.data.message, result.data.iserror)
+      setData(prev => ([...result.data.data]))
+    } catch (err) {
+      set_err(err.message, err.iserror)
       console.log(err)
     }
   }
   useEffect(() => {
     const get_data = async () => {
       console.log(details.uid);
-      const result = await axios.post('https://backend-livespace.onrender.com/Listings/SubmitedListing', { uid: "o97F4U9nRhgpEQwfMBCUKUAD22q1" })
+      const result = await axios.post('https://backend-livespace.onrender.com/Listings/SubmitedListing', { uid: details.uid })
       console.log(result.data);
       setData(prev => ([...result.data]))
     }
@@ -47,11 +47,11 @@ function SubmitedListing() {
   return (
     <div className='submit-outer'>
       <div className="submit-main">
-        
+
         <div className='submit-display'>
           <ul>
             {
-              data.length > 0 && data.map((ele, index) => (
+              data.length !== 0 ? (data.map((ele, index) => (
                 <li className="submit-content" key={index}>
                   <div className="img">
                     <img src={ele.Thumbnail} style={{ width: '100' }} />
@@ -66,12 +66,18 @@ function SubmitedListing() {
                     </ul>
                   </div>
                   <div className="submit-btns">
-                    <button type="button" class="btn btn-primary" disabled={ele.Sale}  onClick={()=>mark(ele._id)}>Mark as Sold</button>
-                    <button type="button" disabled={ele.Pending} class="btn btn-info" onClick={()=>mark(ele._id)}>Mark as Pending</button>
-                    <button type="button" class="btn btn-danger" onClick={()=>Delete_by_id(ele._id)}>Delete Listing</button>
+                    <button type="button" class="btn btn-primary" disabled={ele.Sale} onClick={() => mark(ele._id)}>Mark as Sold</button>
+                    <button type="button" disabled={ele.Pending} class="btn btn-info" onClick={() => mark(ele._id)}>Mark as Pending</button>
+                    <button type="button" class="btn btn-danger" onClick={() => Delete_by_id(ele._id)}>Delete Listing</button>
                   </div>
                 </li>
-              ))
+              ))) : (<>
+                <div style={{ width: "100%", height: "auto", display: "flex", justifyContent: "center" }}>
+                  <div style={{ display: "block" }}>
+                    <img src={require('../images/no-product.png')} />
+                  </div>
+                </div>
+              </>)
             }
           </ul>
         </div>
