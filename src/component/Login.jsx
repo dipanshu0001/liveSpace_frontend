@@ -155,13 +155,7 @@ function Login() {
                             <ul>
                                 <li><span>or Login with</span></li>
                                 <li>
-                                    <li>
-                                        <a href="https://www.facebook.com/login/" target="_blank">
-                                            <Button variant="primary">
-                                                <FiFacebook className="fb" />
-                                            </Button>
-                                        </a>
-                                    </li>
+                                   
 
                                     <li>
 
