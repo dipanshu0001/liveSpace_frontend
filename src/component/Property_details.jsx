@@ -71,7 +71,7 @@ function Property_details({ detail_data }) {
 
     const handleMessage = () => {
         if(!details.isloggedin) navigate('/Login')
-        axios.post("/Agents/SendEmail", { ...form_data, agent_email: agent_data.Gmail, agnt_name: agent_data.Name })
+        axios.post("https://backend-livespace.onrender.com/Agents/SendEmail", { ...form_data, agent_email: agent_data.Gmail, agnt_name: agent_data.Name })
             .then(response => {
                 set_err(response.data.message, response.data.iserror)
                 set_data({
@@ -86,7 +86,7 @@ function Property_details({ detail_data }) {
         if(!details.isloggedin) navigate('/Login')
 
         try {
-            const result = await axios.post('/Tours/ScheduleTour', {
+            const result = await axios.post('https://backend-livespace.onrender.com/Tours/ScheduleTour', {
                 ...tour_data,
                 Listing_id: detail_data._id,
                 User_uid: details.uid,
