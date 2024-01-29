@@ -15,7 +15,7 @@ function AllListing() {
     useEffect(() => {
         const get_data = async () => {
             try {
-                const result = await axios.post('https://backend-livespace.onrender.com/Listings/GetAllListing');
+                const result = await axios.post(`http://localhost:4000/Listings/GetAllListing`);
                 setData(prev => ([...result.data]))
             } catch (err) {
                 set_err(err.message, err.iserror);

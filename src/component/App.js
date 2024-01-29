@@ -29,6 +29,7 @@ function App() {
   // React.useEffect(()=>{console.log(is_clicked)},[is_clicked])
   return (
     <>
+    { process.env.NODE_ENV === 'development' ? process.env.REACT_APP_DEV_MODE : process.env.REACT_APP_PRO_MODE }
 
       <AccountProvider>
         <ToastContainer />
@@ -53,14 +54,12 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/Agents" element={<Agents />} />
               <Route path="/Listing" element={<Listing />} >
-                {/* <Route path="*" element={<Not_found />} /> */}
               </Route>
               <Route path="/Form" element={
                 <Protected_route>
                   <Form />
                 </Protected_route>
-              } />
-
+              }/>
               <Route path="/categories/" element={<Display_categories />} />
               <Route path="/categories/:category" element={<Display_categories />} />
               <Route path="/See_details/:id" element={<See_details />} />

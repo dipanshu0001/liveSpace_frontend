@@ -23,7 +23,7 @@ function Agenttemplate({ agent, isagent, is_category, is_schedule, handleCancel,
     const get_data = async () => {
 
       try {
-        const response = await axios.post("https://backend-livespace.onrender.com/Agents/GetAgent", { uid: agent.Agent_uid });
+        const response = await axios.post(`http://localhost:4000/Agents/GetAgent`, { uid: agent.Agent_uid });
         // console.log(response.data);
         setdata(prev => ({ ...response.data }))
       } catch (e) { console.log(e.message, "error while fetching agent data for agent template") }

@@ -15,7 +15,7 @@ function See_details() {
 
   const get_data = async () => {
     try {
-      const particular_data = await axios.post('https://backend-livespace.onrender.com/Listings/GetParticular', { id: id })
+      const particular_data = await axios.post(`http://localhost:4000/Listings/GetParticular`, { id: id })
       // console.log({ ...particular_data.data.Listing_data[0]});
       if (particular_data.data.Listing_data.length > 0) {
         setData(prev=>({ ...particular_data.data.Listing_data}));

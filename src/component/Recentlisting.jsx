@@ -61,7 +61,7 @@ function Recentlisting() {
     const get_data= async()=>{
 
       try{
-        const response=await axios.post('https://backend-livespace.onrender.com/Listings/LimitedDisplay',{quantity:5});
+        const response=await axios.post(`http://localhost:4000/Listings/LimitedDisplay`,{quantity:5});
         // console.log(response.data);
         setsample(prev=>([...response.data]))
       }catch(e){console.log(e.message)}

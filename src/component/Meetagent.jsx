@@ -57,7 +57,7 @@ const Meetagent= () => {
   useEffect(()=>{
     const get_agent=async()=>{
       try{
-        const result=await axios.post('https://backend-livespace.onrender.com/Agents/AllAgents');
+        const result=await axios.post(`http://localhost:4000/Agents/AllAgents`);
         console.log(result.data)
         setData(prev=>([...result.data]))
 

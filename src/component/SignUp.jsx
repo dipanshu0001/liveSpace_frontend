@@ -84,7 +84,7 @@ function SignUp() {
                     upload_image(file)
                         .then(response => {
                             console.log(response);
-                            axios.post('https://backend-livespace.onrender.com/Agents/AddDetails', { uid: responses.uid, Imageurl: response, Gmail: form_data.email, Name: form_data.name })
+                            axios.post(`http://localhost:4000/Agents/AddDetails`, { uid: responses.uid, Imageurl: response, Gmail: form_data.email, Name: form_data.name })
                                 .then(data => {
                                     console.log(data.data);
                                     set_err(data.data.message, data.data.iserror);

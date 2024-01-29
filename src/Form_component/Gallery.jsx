@@ -72,7 +72,7 @@ function Gallery() {
         throw new Error('Upload failed');
       }
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       return data.secure_url;
 
     } catch (error) {

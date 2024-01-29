@@ -35,7 +35,7 @@ function Property_details({ detail_data }) {
     });
     const get_data = async () => {
         try {
-            const data = await axios.post('https://backend-livespace.onrender.com/Listings/LimitedDisplay', { quantity: 6 });
+            const data = await axios.post(`http://localhost:4000/Listings/LimitedDisplay`, { quantity: 6 });
             // console.log(data);
 
             setmoredata(prev => ([...data.data]));
@@ -44,7 +44,7 @@ function Property_details({ detail_data }) {
 
     const get_agent = async () => {
         try {
-            const response_data = await axios.post("https://backend-livespace.onrender.com/Agents/GetAgent", { uid: detail_data.Agent_uid })
+            const response_data = await axios.post(`http://localhost:4000/Agents/GetAgent`, { uid: detail_data.Agent_uid })
             // console.log(response_data.data);
             setdata(prev => ({ ...response_data.data }));
         } catch (e) { console.log(e.message) }
@@ -71,7 +71,7 @@ function Property_details({ detail_data }) {
 
     const handleMessage = () => {
         if(!details.isloggedin) navigate('/Login')
-        axios.post("https://backend-livespace.onrender.com/Agents/SendEmail", { ...form_data, agent_email: agent_data.Gmail, agnt_name: agent_data.Name })
+        axios.post(`http://localhost:4000/Agents/SendEmail`, { ...form_data, agent_email: agent_data.Gmail, agnt_name: agent_data.Name })
             .then(response => {
                 set_err(response.data.message, response.data.iserror)
                 set_data({
@@ -86,7 +86,7 @@ function Property_details({ detail_data }) {
         if(!details.isloggedin) navigate('/Login')
 
         try {
-            const result = await axios.post('https://backend-livespace.onrender.com/Tours/ScheduleTour', {
+            const result = await axios.post(`http://localhost:4000/Tours/ScheduleTour`, {
                 ...tour_data,
                 Listing_id: detail_data._id,
                 User_uid: details.uid,

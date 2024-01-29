@@ -24,7 +24,8 @@ function Home() {
   const [sample, setNavbar] = useState([]);
   const get_data = () => {
     // try{
-    axios.post("https://backend-livespace.onrender.com/Listings/LimitedDisplay")
+      // console.log(process.env.REACT_APP_PROXY) 
+    axios.post(`http://localhost:4000/Listings/LimitedDisplay`)
       .then(data => { setNavbar(prev => ([...prev, ...data.data]));})
       .catch(err => console.log(err));
   }

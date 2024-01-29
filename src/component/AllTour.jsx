@@ -9,8 +9,8 @@ function AllTour() {
   useEffect(() => {
     const get_data = async () => {
       try {
-        const result = await axios.post("https://backend-livespace.onrender.com/Tours/GetAllTour");
-        console.log(result.data);
+        const result = await axios.post(`http://localhost:4000/Tours/GetAllTour`);
+        // console.log(result.data);
         setData(prev => ([...result.data]))
       }
       catch (e) {
@@ -21,7 +21,7 @@ function AllTour() {
   }, [])
   const CancelTour=async(_id)=>{
     try{
-      const result = await axios.post("https://backend-livespace.onrender.com/Tours/CancelTour",{_id});
+      const result = await axios.post(`http://localhost:4000/Tours/CancelTour`,{_id});
       set_err(result.data.messag,result.data.iserror);
     }catch(e){
       set_err(e.message,e.iserror)

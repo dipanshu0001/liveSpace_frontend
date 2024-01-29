@@ -11,8 +11,8 @@ function ScheduledTour() {
   const handleCancel = async (_id) => {
     try {
       // console.log(_id)
-      const result = await axios.post("https://backend-livespace.onrender.com/Tours/DeleteTourid", { _id, uid: details.uid })
-      console.log(result.data.listings);
+      const result = await axios.post(`http://localhost:4000/Tours/DeleteTourid`, { _id, uid: details.uid })
+      // console.log(result.data.listings);
       setData(prev => ([...result.data.listings]))
       set_err(result.data.message, result.data.iserror);
     } catch (err) {
@@ -22,8 +22,8 @@ function ScheduledTour() {
   useEffect(() => {
     const get_data = async () => {
       try {
-        const result = await axios.post('https://backend-livespace.onrender.com/Tours/GetToursUser', { uid: details.uid});
-        console.log(...result.data);
+        const result = await axios.post(`http://localhost:4000/Tours/GetToursUser`, { uid: details.uid});
+        // console.log(...result.data);
         setData(prev => ([...result.data]))
       } catch (err) {
         console.log(err);

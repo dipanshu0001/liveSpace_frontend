@@ -13,7 +13,7 @@ function Agent_model({Listing_id,update}) {
     useEffect(() => {
         const get_data = async () => {
             try {
-                const result = await axios.post("https://backend-livespace.onrender.com/Agents/AllAgentsAssign");
+                const result = await axios.post(`http://localhost:4000/Agents/AllAgentsAssign`);
                 setData(prev => ([...result.data]))
                 console.log(result.data)
             } catch (err) {
@@ -25,7 +25,7 @@ function Agent_model({Listing_id,update}) {
     }, [])
     const handleAssign=async(uid)=>{
         try{
-            const result=await axios.post('https://backend-livespace.onrender.com/Agents/AssignAgent',{_id:Listing_id,uid});
+            const result=await axios.post(`http://localhost:4000/Agents/AssignAgent`,{_id:Listing_id,uid});
             console.log(result.data.agents)
             setData(prev=>([...result.data.agents]))
             set_err(result.data.message,result.data.iserror)

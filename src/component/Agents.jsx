@@ -12,7 +12,7 @@ function Agents() {
   const[data,setData]=useState([]);
   const get_data = async () => {
     try {
-      const data = await axios.post('https://backend-livespace.onrender.com/Listings/LimitedDisplay',{quantity:15});
+      const data = await axios.post(`http://localhost:4000/Listings/LimitedDisplay`,{quantity:15});
       console.log(data);
 
       setmoredata(prev => ([...data.data]));
@@ -21,7 +21,7 @@ function Agents() {
   useEffect(() => {
     const get_agent_data = async () => {
       try {
-        const result = await axios.post("https://backend-livespace.onrender.com/Agents/AllAgents");
+        const result = await axios.post(`http://localhost:4000/Agents/AllAgents`);
         setData(prev => ([...result.data]))
         console.log(result.data)
       } catch (err) {

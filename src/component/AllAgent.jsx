@@ -11,7 +11,7 @@ function AllAgent() {
     useEffect(()=>{
         const get_data=async()=>{
             try{
-                const result=await axios.post("https://backend-livespace.onrender.com/Agents/AllAgents");
+                const result=await axios.post(`http://localhost:4000/Agents/AllAgents`);
                 setData(prev=>([...result.data]))
                 console.log(result.data)
             }catch(err){
@@ -25,7 +25,7 @@ function AllAgent() {
         // console.log("helloe");
         // console.log(uid);
         try{
-            const result=await axios.post('Agents/DeleteAgent',{uid});
+            const result=await axios.post(`http://localhost:4000/Agents/DeleteAgent`,{uid});
             set_err(result.data.message,result.data.iserror);
             setData(prev=>([...result.data.new_result]));
         }catch(e){

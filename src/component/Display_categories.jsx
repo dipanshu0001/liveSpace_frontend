@@ -19,7 +19,7 @@ function Display_categories() {
   const checkBox = ["House", "Appartment", "Duplex", "Villa"]
   const [displayData, setData] = useState([]);
   const [filteroptions, setOptions] = useState({
-    Type: [],
+    Type:category===""?[]:[category],
     maxPrice: "",
     minPrice: "",
     sort: "asc",
@@ -32,7 +32,7 @@ function Display_categories() {
   const Applyhandel = async () => {
     const { Type, minPrice, maxPrice, sort, RentalPeriod } = filteroptions
     try {
-      const result = await axios.get(`https://backend-livespace.onrender.com/Categories/FilteredData`, {
+      const result = await axios.get(`http://localhost:4000/Categories/FilteredData`, {
         params: {
           Type: Type.join(','),
           maxPrice: maxPrice,
@@ -54,6 +54,31 @@ function Display_categories() {
       console.log(e.message)
     }
   }
+  // const handleclear=async()=>{
+  //   const { Type, minPrice, maxPrice, sort, RentalPeriod } = filteroptions
+  //   try {
+  //     const result = await axios.get(`http://localhost:4000/Categories/FilteredData`, {
+  //       params: {
+  //         Type: [],
+  //         maxPrice: "",
+  //         minPrice: "",
+  //         sort: "asc",
+  //         RentalPeriod: "Both"
+  //       }
+  //     })
+  //     // setOptions(prev=>({
+  //     //   Type: [],
+  //     //   maxPrice: "",
+  //     //   minPrice: "",
+  //     //   sort: "asc",
+  //     //   RentalPeriod: "Both"
+  //     // }))
+  //     console.log(result.data);
+  //     setData(prev => result.data)
+  //   } catch (e) {
+  //     console.log(e.message)
+  //   }
+  // }
   const handelChange = e => {
     const { value, checked } = e.target;
     if (checked) {
@@ -84,7 +109,7 @@ function Display_categories() {
   useEffect(() => {
     const get_data = async () => {
       try {
-        const response = await axios.get('https://backend-livespace.onrender.com/Listings/LimitedDisplay');
+        const response = await axios.get(`http://localhost:4000/Listings/LimitedDisplay`);
         setData(prev => [...response.data])
       } catch (e) { console.log(e.message) }
     }
@@ -131,6 +156,7 @@ function Display_categories() {
                           type="checkbox"
                           name={ele}
                           value={ele}
+                          // defaultChecked={e=>e.target.name===category}
                           onChange={handelChange}
                         // className='checkbox'
                         />
@@ -259,7 +285,7 @@ function Display_categories() {
                   </div>
                   <div className='apply-filter'>
                     <div onClick={Applyhandel}><Button variant="info">Apply Filter</Button>{' '}</div>
-                    <div><Button variant="warning">Clear Filter</Button>{' '}</div>
+                    <div><Button variant="warning" >Clear Filter</Button>{' '}</div>
                   </div>
                 </div>
               </div>

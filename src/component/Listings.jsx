@@ -16,7 +16,7 @@ function Listings() {
   const get_data= async()=>{
 
     try{
-      const response=await axios.post('https://backend-livespace.onrender.com/Listings/LimitedDisplay');
+      const response=await axios.post(`http://localhost:4000/Listings/LimitedDisplay`);
       // console.log(response.data);
       setsample(prev=>([...response.data]))
     }catch(e){console.log(e.message)}

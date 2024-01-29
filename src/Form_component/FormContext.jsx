@@ -37,7 +37,7 @@ function FormContext({ children }) {
   const upload_data = () => {
   // console.log(details,formData);
 
-    axios.post("https://backend-livespace.onrender.com  /Listings/AddDetails", { ...formData,...details })
+    axios.post(`http://localhost:4000/Listings/AddDetails`, { ...formData,...details })
       .then(response => set_err(response.data.message,1))
       .catch(error => {
         // console.log(error.data.message)

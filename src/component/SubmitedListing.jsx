@@ -14,7 +14,7 @@ function SubmitedListing() {
   const mark = async (e) => {
     try {
       console.log(e);
-      const result = await axios.post('https://backend-livespace.onrender.com/Listings/MarkSold', { _id: e, uid: details.uid });
+      const result = await axios.post(`http://localhost:4000/Listings/MarkSold`, { _id: e, uid: details.uid });
       // console.log(result.data.data)
       set_err(result.data.message, result.data.iserror)
       setData(prev => ([...result.data.data]))
@@ -26,7 +26,7 @@ function SubmitedListing() {
   const Delete_by_id = async (e) => {
     try {
       console.log(e);
-      const result = await axios.post('https://backend-livespace.onrender.com/Listings/DeleteId', { _id: e, uid: details.uid });
+      const result = await axios.post(`http://localhost:4000/Listings/DeleteId`, { _id: e, uid: details.uid });
       // console.log(result.data.data)
       set_err(result.data.message, result.data.iserror)
       setData(prev => ([...result.data.data]))
@@ -38,7 +38,7 @@ function SubmitedListing() {
   useEffect(() => {
     const get_data = async () => {
       console.log(details.uid);
-      const result = await axios.post('https://backend-livespace.onrender.com/Listings/SubmitedListing', { uid: details.uid })
+      const result = await axios.post(`http://localhost:4000/Listings/SubmitedListing`, { uid: details.uid })
       console.log(result.data);
       setData(prev => ([...result.data]))
     }

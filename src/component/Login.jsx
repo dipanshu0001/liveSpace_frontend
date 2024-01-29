@@ -29,7 +29,7 @@ function Login() {
     })
     const [isopen, setopen] = useState(false);
     const add_data = async (result) => {
-        console.log(result);
+        // console.log(result);
         try {
             const isdata_present = await getDoc(doc(userRef, result.uid));
             if (!isdata_present.exists()) {

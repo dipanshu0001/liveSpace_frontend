@@ -26,10 +26,10 @@ function Agent_detail() {
     console.log(id)
     const get_all_data = async () => {
       try {
-        const agent_result = await axios.post("https://backend-livespace.onrender.com/Agents/GetAgent", { uid: id })
+        const agent_result = await axios.post(`http://localhost:4000/Agents/GetAgent` , { uid: id })
         // console.log(agent_result.data);
         setDetail(prev => ({ ...agent_result.data }))
-        const agent_listing_detail = await axios.post("https://backend-livespace.onrender.com/Agents/AgentListings", { uid: id })
+        const agent_listing_detail = await axios.post(`http://localhost:4000/Agents/AgentListings`, { uid: id })
         // console.log(agent_listing_detail.data)
         setListing(prev => ([...agent_listing_detail.data]))
       } catch (err) {
@@ -43,7 +43,7 @@ function Agent_detail() {
     e.preventDefault();
   }
   const handleMessage = () => {
-    axios.post("https://backend-livespace.onrender.com/Agents/SendEmail", { ...form_data, agent_email: agent_data.Gmail, agnt_name: agent_data.Name })
+    axios.post(`http://localhost:4000/Agents/SendEmail`, { ...form_data, agent_email: agent_data.Gmail, agnt_name: agent_data.Name })
       .then(response => {
         set_err(response.data.message, response.data.iserror)
         set_data({
