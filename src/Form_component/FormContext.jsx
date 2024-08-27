@@ -8,7 +8,7 @@ export const DataContext = createContext(null);
 
 
 function FormContext({ children }) {
-  const{details,set_err} =useAuthData();
+  const{details,set_err} = useAuthData();
   const [formData, setformData] = useState({
     Description: "",
     Name: "",
@@ -31,9 +31,9 @@ function FormContext({ children }) {
     Year_Build: "",
     View:""
   })
-  React.useEffect(() => {
-    // console.log(formData)
-  }, [formData])
+  // React.useEffect(() => {
+  //   // console.log(formData)
+  // }, [formData])
   const upload_data = () => {
   // console.log(details,formData);
 
@@ -49,10 +49,11 @@ function FormContext({ children }) {
   }
   return (
     <DataContext.Provider value={{ formData, setformData, upload_data }}>
+      {/* this provide all the functionality which we define in the value section to its children which are wrapped by it. */}
       {children}
     </DataContext.Provider>
 
   )
 }
-export const useData = () => useContext(DataContext);
+export const useData = () => useContext(DataContext);// it return a object of functionlity which we have passed
 export default FormContext

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Basic_info.css'
 import {useData} from './FormContext'
 function Basic_info() {
-  const{formData,setformData}=useData();
+  const{formData,setformData}=useData(); //calling the object that we created to access the data from useContext.
   // const [formData, setData] = useState({
   //   Description:"",
   //   Name:"",
@@ -12,7 +12,7 @@ function Basic_info() {
   //   RentalPeriod:"",
   //   Space:""
   // })
-  console.log(formData);
+  // console.log(formData);
   const set_form_data = (e) => {
     const { name, value } = e.target;
     // console.log(name,value);

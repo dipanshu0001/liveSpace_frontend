@@ -6,8 +6,8 @@ import 'leaflet/dist/leaflet.css';
 // import React from 'react'
 
 function DisplayMap({lat,long}) {
-  console.log(lat,long);
-  console.log(lat,long);
+  // console.log(lat,long);
+  // console.log(lat,long);
     useEffect(() => {
         // Initialize the map
         const map = L.map('map').setView([lat, long], 12);

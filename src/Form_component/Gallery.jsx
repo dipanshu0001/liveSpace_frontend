@@ -9,7 +9,6 @@ import { useData } from "./FormContext";
 // import { async } from "@firebase/util";
 
 
-
 function Gallery() {
   const [files, setFiles] = useState([]);
   const [inputFile, setinputFile] = useState(null);

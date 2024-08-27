@@ -37,7 +37,7 @@ function App() {
           <Routes>
             <Route element={<WithoutNavbar />}>
               <Route path="/Login" element={<Login />} />
-              <Route path="/Singup" element={<SignUp />} />\
+              <Route path="/Singup" element={<SignUp />} />
               <Route path="/Admin-login" element={<Admin_login_form/>}/>
               <Route path="/Profile" element={
                 <Protected_route>
